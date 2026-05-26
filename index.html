@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MediaPipe 表情辨識</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+</head>
+<body>
+  <main>
+    <h1>MediaPipe 表情辨識</h1>
+    <p>請允許攝影機存取，然後用臉部表情觸發語音回饋。</p>
+    <div class="video-card">
+      <video id="input_video" autoplay playsinline muted></video>
+      <canvas id="output_canvas"></canvas>
+    </div>
+    <div class="status">
+      <p>目前表情：<span id="expression">等待中...</span></p>
+      <p id="hint">請看鏡頭並微笑或張嘴。</p>
+    </div>
+    <button id="toggleCamera">切換前後鏡頭</button>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
